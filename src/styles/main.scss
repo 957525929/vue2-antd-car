@@ -1,0 +1,54 @@
+@import "./normalize.scss";
+@import "./sassConfig.scss";
+@import "./icon.scss";
+//color
+.color-main {
+  color: $color-main;
+}
+//text-algin
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+//float
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+//poisition
+.p-r {
+  position: relative;
+}
+.p-a {
+  position: absolute;
+}
+//font-size
+.fs-24 {
+  font-size: 24px;
+}
+//clearfix
+.clearfix {
+  @extend %clearfix;
+}
+
+//common ui
+.select-car-btn {
+  margin: 0 17px;
+  display: block;
+  width: 240px;
+  height: 84px;
+  border-radius: 100px;
+  line-height: 84px;
+  text-align: center;
+  color: #fff;
+  background-color: $color-main;
+  font-size: 26px;
+  font-weight: 300;
+}
