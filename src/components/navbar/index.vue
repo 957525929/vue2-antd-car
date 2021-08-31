@@ -1,19 +1,28 @@
 <template>
   <div class="navbar">
     <ul>
-      <li><i class="icon icon-help"></i></li>
-      <li><i class="icon icon-help"></i></li>
+      <li><i class="icon icon-w-44 icon-search"></i></li>
+      <li><i class="icon icon-w-44 icon-help"></i></li>
       <li>
         <a href="javascript: void(0);" class="select-car-btn">选择车辆</a>
       </li>
-      <li><i class="icon icon-help"></i></li>
-      <li><i class="icon icon-help"></i></li>
+      <li><i class="icon icon-w-44 icon-location"></i></li>
+      <li><i class="icon icon-w-44 icon-user" @click="toUser"></i></li>
     </ul>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  name: "Navbar",
+  methods: {
+    toUser() {
+      this.$router.push({
+        name: "User",
+      });
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -30,7 +39,8 @@ export default {};
   .icon {
     margin: 0 17px;
     vertical-align: middle;
+    background-color: $color-main;
+    border-radius: 100px;
   }
 }
-
 </style>

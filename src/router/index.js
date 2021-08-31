@@ -15,6 +15,17 @@ const routes = [
         name: "User",
         component: () => import("../views/user/index.vue"),
       },
+      //安全设置 -首页
+      {
+        path: "/safe",
+        name: "Safe",
+        component: () => import("../views/safe/index.vue"),
+      },
+      {
+        path: "/password",
+        name: "Password",
+        component: () => import("../views/safe/password.vue"),
+      },
     ],
   },
 ];

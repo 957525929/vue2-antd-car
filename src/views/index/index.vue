@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- dom data渲染 -->
-    <Cars />
+    <!-- <Cars /> -->
     <!-- 地图 -->
     <Map />
     <!-- 导航 -->
@@ -26,7 +26,7 @@ export default {
   },
   data() {
     return {
-      show: false,
+      // show: false,
     };
   },
   computed: {
@@ -44,6 +44,17 @@ export default {
     //   },
     // },
   },
+  mounted() {
+    document.addEventListener("mouseup", (e) => {
+      const userCon = document.getElementById("children-view");
+      if (userCon && !userCon.contains(e.target)) {
+        this.$router.push({
+          name: "Index",
+        });
+      }
+    });
+    console.log(this.$route.name);
+  },
 };
 </script>
 
@@ -56,11 +67,8 @@ export default {
   z-index: 101;
   width: 410px;
   background-color: #34393f;
-  -webkit-transform: all 0.3s ease 0s;
-  -moz-transform: all 0.3s ease 0s;
-  -ms-transform: all 0.3s ease 0s;
-  -o-transform: all 0.3s ease 0s;
-  transform: all 0.3s ease 0s;
+  @include webkit(transform, all 0.3s ease 0s);
+  @include webkit(box-shadow, -5px 0 38px 0 raba(0, 0, 0, 0.4));
   &.open {
     right: 0;
   }
