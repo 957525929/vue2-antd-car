@@ -10,6 +10,8 @@
     <div id="children-view" :class="{ open: show }">
       <router-view />
     </div>
+    <!-- login -->
+    <LoginVue />
   </div>
 </template>
 
@@ -17,12 +19,14 @@
 import Map from "../amap";
 import Cars from "../cars";
 import NavBar from "@c/navbar";
+import LoginVue from "./login";
 export default {
   name: "Amap",
   components: {
     Map,
     Cars,
     NavBar,
+    LoginVue,
   },
   data() {
     return {
